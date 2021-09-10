@@ -25,15 +25,15 @@ elif random_number == 9:
 else:
   answer = 'error'
 # Printables
-if not name and not question == '':
+if name and question != '':
   print(name +" " + 'asks: ' + question)
   print("Magic 8-ball's answer: " + answer)
-elif name and not question == "":
+elif not name and question != "":
   print("Question: " + question)
   print('Answer: ' + answer)
-elif question  == '' and not name == '':
+elif name and not question != '':
  print('Ask a question, ' + name)
 else:
-  print('Ask a question, dumbass.')
+  print('Ask a question, dummy.')
 
 
