@@ -1,5 +1,5 @@
 name = 'Mike'
-question = 'Will I leave?'
+question = ''
 answer = ''
 import random
 random_number = random.randint(1, 9)
@@ -30,9 +30,10 @@ if not name and not question == '':
   print("Magic 8-ball's answer: " + answer)
 elif name and not question == "":
   print("Question: " + question)
-elif question and name == "":
-  print("Ask a question, dumbass.")
-elif question and not name == '':
+  print('Answer: ' + answer)
+elif question  == '' and not name == '':
  print('Ask a question, ' + name)
+else:
+  print('Ask a question, dumbass.')
 
 
