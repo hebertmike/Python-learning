@@ -11,6 +11,7 @@ elif weight > 6 <= 10:
 else:
   cost_ground = weight * 4.75 + 20
 
+print('Ground shipping cost:')
 print('$', cost_ground)
 
 ground_shipping_premium = 125.00
@@ -29,6 +30,40 @@ elif weight > 6 <= 10:
 else:
   cost_drone = weight * 14.25
 
+print('Drone shipping cost:')
 print('$', cost_drone)
 
 # I want to reuse the 2 separate if/elif/else tables but be able to change the weight variable
+weight = 41.5
+
+if weight <= 2: 
+  cost_ground = weight * 1.5 + 20
+elif weight > 2 <= 6:
+  cost_ground = weight * 3 + 20
+elif weight > 6 <= 10:
+  cost_ground = weight * 4 + 20
+else:
+  cost_ground = weight * 4.75 + 20
+
+total_cost_ground = cost_ground + 125.00
+
+if weight < 2:
+  cost_drone = weight * 4.5
+elif weight > 2 <= 6:
+  cost_drone = weight * 9.00
+elif weight > 6 <= 10:
+ cost_drone = weight * 12.00
+else:
+  cost_drone = weight * 14.25
+
+cost_difference_air = total_cost_ground - cost_drone
+cost_difference_ground = cost_drone - total_cost_ground
+
+if total_cost_ground >= cost_drone:
+  print('Drone cost is cheapest. You save $', str(cost_difference_air))
+  print('''Total cost before taxes
+$''', str(cost_drone))
+else: 
+  print('Ground cost is cheapest. You save $', str(cost_difference_ground))
+  print('''Total cost before taxes
+$''', str(total_cost_ground))
