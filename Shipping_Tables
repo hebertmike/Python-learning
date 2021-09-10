@@ -34,6 +34,9 @@ print('Drone shipping cost:')
 print('$', cost_drone)
 
 # I want to reuse the 2 separate if/elif/else tables but be able to change the weight variable
+
+# I wrote the below to be a better indicator of what I'm wanting to reuse 
+
 weight = 41.5
 
 if weight <= 2: 
